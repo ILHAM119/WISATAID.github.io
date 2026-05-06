@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wisata Indonesia |  Travel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">WISATA<span>ID</span></div>
+        <ul class="nav-links">
+            <li><a href="#home" id="nav-home">Berand        a</a></li>
+            <li><a href="#destinations" id="nav-dest">Destinasi</a></li>
+            <li><a href="#contact" id="nav-contact">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="carousel">
+            <div class="carousel-slide active">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1350&q=80" alt="Pantai Bali">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1350&q=80" alt="Candi Borobudur">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1350&q=80" alt="Gunung Bromo">
+            </div>
+            <div class="carousel-controls">
+                <button class="carousel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="carousel-btn next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+            <div class="carousel-indicators">
+                <span class="indicator active" onclick="goToSlide(0)"></span>
+                <span class="indicator" onclick="goToSlide(1)"></span>
+                <span class="indicator" onclick="goToSlide(2)"></span>
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1>Keindahan Indonesia </h1>
+            <p>Temukan pengalaman tak terlupakan di setiap sudut nusantara.</p>
+            <button class="btn-cta" id="startAdventure">Mulai Petualangan</button>
+            <div class="visitor-counter">
+                <p>Jumlah pengunjung W20 Wisata: <span id="visitorCount">0</span> orang</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Carousel Section -->
+    <section id="featured" class="featured">
+        <h2 class="section-title">Destinasi Sering Dikunjungi</h2>
+        <div class="featured-carousel">
+            <div class="featured-slide active">
+                <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=1200&q=80" alt="Pantai Kuta Bali">
+                <div class="featured-info">
+                    <h3>Bali - Pantai Kuta</h3>
+                    <p>Pantai eksotis dengan sunset menakjubkan</p>
+                    <p class="price">Rp 750.000</p>
+                </div>
+            </div>
+            <div class="featured-slide">
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="Gunung Bromo">
+                <div class="featured-info">
+                    <h3>Gunung Bromo</h3>
+                    <p>Destinasi favorit banyak pengunjung</p>
+                    <p class="price">Rp 600.000</p>
+                </div>
+            </div>
+            <div class="featured-slide">
+                <img src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Featured 3">
+                <div class="featured-info">
+                    <h3>Raja Ampat</h3>
+                    <p>Surga bawah laut dengan keanekaragaman hayati</p>
+                    <p class="price">Rp 2.500.000</p>
+                </div>
+            </div>
+            
+            <!-- Featured Carousel Controls -->
+            <button class="featured-btn prev" onclick="changeFeaturedSlide(-1)">&#10094;</button>
+            <button class="featured-btn next" onclick="changeFeaturedSlide(1)">&#10095;</button>
+            
+            <!-- Featured Carousel Indicators -->
+            <div class="featured-indicators">
+                <span class="featured-indicator active" onclick="goToFeaturedSlide(0)"></span>
+                <span class="featured-indicator" onclick="goToFeaturedSlide(1)"></span>
+                <span class="featured-indicator" onclick="goToFeaturedSlide(2)"></span>
+            </div>
+        </div>
+    </section>
+
+    <section id="destinations" class="destinations">
+        <h2 class="section-title">Destinasi Populer</h2>
+        <div class="grid-container" id="destinationGrid">
+            <!-- 21 Destinations will be generated by JS -->
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Hubungi Kami</h2>
+                <p><i class="fas fa-envelope"></i> rtxryzxd@gamil.com</p>
+                <p><i class="fas fa-phone"></i> +62 813-3359-792</p>
+                <p><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</p>
+                <a href="https://wa.me/628133359792" target="_blank" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Chat WhatsApp
+                </a>
+            </div>
+            <div class="contact-form">
+                <h3>Kirim Pesan</h3>
+                <form id="footerForm">
+                    <input type="text" placeholder="Nama Lengkap" required>
+                    <input type="email" placeholder="Email (Gmail)" required>
+                    <textarea placeholder="Pesan Anda" rows="4" required></textarea>
+                    <button type="submit" class="btn-submit">Kirim Sekarang</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-bottom">
+        <p>&copy; 2023 wisata Indonesia. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Modal Detail Destinasi -->
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('detailModal')">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Modal Pembayaran -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('paymentModal')">&times;</span>
+            <h2>Konfirmasi Pembayaran</h2>
+            <form id="paymentForm">
+                <div class="form-group">
+                    <label>Nama Lengkap</label>
+                    <input type="text" id="payName" required>
+                </div>
+                <div class="form-group">
+                    <label>Email (Gmail)</label>
+                    <input type="email" id="payEmail" required>
+                </div>
+                <div class="form-group">
+                    <label>Metode Pembayaran</label>
+                    <select id="payMethod">
+                        <option value="nomor wa">nommor wa -  ()</option>
+                        <option value="mandiri">nomer wa - 082143269373 (A/N NgapainNgoding)</option>
+                        <option value="gopay">GoPay - 081234567890</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-confirm">Bayar Sekarang</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/628133359792" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
